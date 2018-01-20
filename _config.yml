@@ -9,9 +9,9 @@ url: "http://luoxc.xyz" # the base hostname & protocol for your site, e.g. http:
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: LUOXC # add your name
+author: 饭团 # add your name
 author-img: https://avatars3.githubusercontent.com/u/4321114?s=400&v=4 # add your photo
-about-author: I am a java developer focusing on front-end development. Always hungry to keep learning. # add description
+about-author: 我是一个java程序员，喝了大量咖啡无数心血致力于数据分析。 # add description
 # twitter: # add your Twitter handle
 # facebook: # add your Facebook handle
 github: luoxc # add your Github handle
