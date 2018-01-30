@@ -7,7 +7,9 @@ img: software.jpg
 tags: [Effective Java]
 ---
 
-一个类允许客户端获取其实例的传统方式是提供一个公共构造方法。 其实还有另一种技术应该成为每个程序员工具箱的一部分。 一个类可以提供一个公共静态工厂方法，它只是一个返回类实例的静态方法。 下面是一个Boolean简单的例子（boolean基本类型的包装类）。 此方法将boolean基本类型转换为Boolean对象引用：
+一个类允许客户端获取其实例的传统方式是提供一个公共构造方法。 其实还有另一种技术应该成为每个程序员工具箱的一部分。 一个类可以提供一个公共静态工厂方法，它只是一个返回类实例的静态方法。
+
+ 下面是一个Boolean简单的例子（boolean基本类型的包装类）。 此方法将boolean基本类型转换为Boolean对象引用：
 ```java
 public static Boolean valueOf(boolean b) {
     return b ? Boolean.TRUE : Boolean.FALSE;
