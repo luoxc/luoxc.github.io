@@ -69,4 +69,6 @@ EnumSet类（条目 36）没有公共构造方法，只有静态工厂。 在Ope
 - getType——与getInstance类似，但是如果在工厂方法中不同的类中使用。Type是工厂方法返回的对象类型，例如：FileStore fs = Files.getFileStore(path);
 - newType——与newInstance类似，但是如果在工厂方法中不同的类中使用。Type是工厂方法返回的对象类型，例如：BufferedReader br = Files.newBufferedReader(path);
 - type—— getType 和 newType简洁的替代方式，例如：List<Complaint> litany = Collections.list(legacyLitany);
-> 总之，静态工厂方法和公共构造方法都有它们的用途，并且了解它们的相对优点是值得的。通常，静态工厂更可取，因此避免在没有考虑静态工厂的情况下提供公共构造方法。
+
+
+>     总之，静态工厂方法和公共构造方法都有它们的用途，并且了解它们的相对优点是值得的。通常，静态工厂更可取，因此避免在没有考虑静态工厂的情况下提供公共构造方法。
