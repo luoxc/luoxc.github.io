@@ -1,9 +1,9 @@
 ---
 layout: post
-title: HyperLedger 简介
+title: HyperLedger
 date: 2018-02-01 19:34:00 +0300
-description: [HyperLedger](https://www.hyperledger.org/) 是区块链技术中的比较流行的开源项目。
-img_url: http://himg2.huanqiu.com/attachment2010/2015/0514/20150514095718228.jpg
+description: HyperLedger 是区块链技术中的比较流行的开源项目。
+img_url: https://tse4-mm.cn.bing.net/th?id=OIP.lG-1gETJHjvVY7q2S3F9ywHaEX&p=0&o=5&pid=1.1
 tags: [HyperLedger]
 ---
 
