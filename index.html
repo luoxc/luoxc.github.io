@@ -6,6 +6,10 @@ layout: main
   {% if post.img %}
     <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
   {% else %}
+    {% if post.img_url %}
+      <a class="post-thumbnail" style="background-image: url({{post.img_url}})" href="{{post.url | prepend: site.baseurl}}"></a>
+    {% else %}
+    {% endif %}
   {% endif %}
   <div class="post-content">
     <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
