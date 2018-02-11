@@ -5,7 +5,7 @@ date: 2018-02-11 14:44:00 +0300
 description: golang install.
 ---
 
-1、参照Go官网，找到linux版本下载路径，执行以下操作下载Go语言包
+1、参照[Go官网](https://golang.org/)，找到linux版本下载路径，执行以下操作下载Go语言包
 ~~~ shell
 curl -O https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
 ~~~
