@@ -1,6 +1,6 @@
 ---
 layout: post
-title: registry install
+title: docker 私服搭建
 date: 2018-02-11 14:44:00 +0300
 description: 
 tag: [docker]
