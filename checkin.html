@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <h1>check in</h1>
+    <button>使用 Ajax 获取数据并执行 JavaScript</button>
+    <div id="console"></div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    var loginid = "xiuchun.luo";
+                    var password = "Qwer@1234";
+                    var udid = "865043040668448";
+                    var clienttype = "android";
+                    var loginBody = "method=login&loginid=" + loginid + "&password=" + password + "&udid=" + udid + "&clienttype=" + clienttype;
+                    var checkInUri = "http://oa.yoho.cn:89/client.do?method=checkin&type=checkin&latlng=31.9824302842882,118.7349622938368&addr=%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%8D%97%E4%BA%AC%E5%B8%82%E5%BB%BA%E9%82%BA%E5%8C%BA%E5%88%9B%E6%99%BA%E8%B7%AF%E9%9D%A0%E8%BF%91%E7%B4%AB%E9%87%91%E7%A7%91%E6%8A%80%E5%88%9B%E4%B8%9A%E7%89%B9%E5%88%AB%E7%A4%BE%E5%8C%BA%E5%85%88%E5%AF%BC%E5%8C%BA%E5%8C%97%E5%8C%BA";
+
+                    $.ajax({
+                        type: "post",
+                        url: "http://oa.yoho.cn:89/client.do",
+                        headers: {
+                            http_client_ip: "172.16.100.1"
+                        },
+                        contentType: "application/x-www-form-urlencoded",
+                        data: loginBody,
+                        success: function (data, status, xhr) {
+                            checkIn(data, status, xhr)
+                        }
+                    });
+
+                    function checkIn(data, status, xhr) {
+                        var head = xhr.getAllResponseHeaders();
+                        $.ajax({
+                            type: "get",
+                            url: checkInUri,
+                            headers: {
+                                Cookie: head.Set - Cookie,
+                                http_client_ip: "172.16.100.1"
+                            },
+                            contentType: "application/x-www-form-urlencoded",
+                            success: function (result) {
+                                $("#console").html(result);
+                            }
+                        });
+                    }
+
+                });
+            });
+    </script>
+</body>
+
+</html>
